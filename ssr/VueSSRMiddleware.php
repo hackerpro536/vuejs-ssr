@@ -38,7 +38,7 @@ class VueSSRMiddleware
         }
 
         $config = $app['config']->get('rendering');
-        $this->flag = $app['config']->get('flag_debug');
+        $this->flag = $config['flag_debug'];
         $this->renderingUri = $config['rendering_url'];
         $this->crawlerUserAgents = $config['crawler_user_agents'];
         $this->whitelist = $config['whitelist'];
