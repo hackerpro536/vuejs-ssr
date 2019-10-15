@@ -2,7 +2,7 @@
     "name": "lptech/vue-ssr",
     "description": "Render Vuejs and JS Framework by Prerender node system. This module working for laravel and renderNode module check out this code pls",
     "keywords": ["vuejs", "rendering", "ssr","seo"],
-    "license": "Apache License 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "LPTech.Asia - LEVANPHU",
