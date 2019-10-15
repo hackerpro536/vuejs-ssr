@@ -46,4 +46,13 @@ class VueSSRProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/rendering.php', 'rendering');
     }
 
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [VueSSRProvider::class];
+    }
 }
