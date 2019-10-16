@@ -2,6 +2,7 @@
 return [
     'enable' => env('RENDERING_ENABLE', true),
     'flag_debug' => env('FLAG_DEBUG', 'render'),
+    'protocol' => env('PROTOCOL', 'https'),
     'rendering_url' => env('RENDERING_URL'),
     'whitelist' => [],
     'blacklist' => [

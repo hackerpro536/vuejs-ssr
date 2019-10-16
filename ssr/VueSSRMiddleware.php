@@ -23,6 +23,7 @@ class VueSSRMiddleware
     private $renderingUri;
     private $returnSoftHttpCodes;
     private $flag;
+    private $protocol;
     public function __construct(Application $app, Guzzle $client)
     {
         $this->app = $app;
@@ -39,6 +40,7 @@ class VueSSRMiddleware
 
         $config = $app['config']->get('rendering');
         $this->flag = $config['flag_debug'];
+        $this->protocol = $config['protocol'];
         $this->renderingUri = $config['rendering_url'];
         $this->crawlerUserAgents = $config['crawler_user_agents'];
         $this->whitelist = $config['whitelist'];
@@ -134,9 +136,6 @@ class VueSSRMiddleware
         $headers = [
             'User-Agent' => $request->server->get('HTTP_USER_AGENT'),
         ];
-
-        $protocol = $request->isSecure() ? 'https' : 'http';
-    
         try {
             // Return the Guzzle Response
         $host = $request->getHost();
@@ -145,7 +144,7 @@ class VueSSRMiddleware
             if ($path == "/") {
                 $path = "";
             }
-            return $this->client->get($this->renderingUri . '/' . urlencode($protocol.'://'.$host.'/'.$path), compact('headers'));
+            return $this->client->get($this->renderingUri . '/' . urlencode($this->protocol.'://'.$host.'/'.$path), compact('headers'));
         } catch (RequestException $exception) {
             if(!$this->returnSoftHttpCodes && !empty($exception->getResponse()) && $exception->getResponse()->getStatusCode() == 404) {
                 \App::abort(404);
