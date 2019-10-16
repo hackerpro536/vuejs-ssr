@@ -19,5 +19,12 @@
         "psr-4": {
             "LPTech\\VueSSR\\": "ssr/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LPTech\\VueSSR\\VueSSRProvider"
+            ]
+        }
     }
 }

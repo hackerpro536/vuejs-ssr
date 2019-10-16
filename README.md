@@ -2,7 +2,7 @@
 Render Vuejs and JS Framework by Prerender node system. This module working for laravel and [renderNode](https://github.com/hackerpro536/renderNode.git) module check out this code pls
 # Publish Provider
 ```
-php artisan vendor:publish --provider="LPTech\VueSSR\VueSSRProvider::class"
+php artisan vendor:publish --provider="LPTech\VueSSR\VueSSRProvider"
 ```
 # User Guide by Manual
 ```
