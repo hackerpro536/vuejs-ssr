@@ -4,8 +4,8 @@ return [
     'flag_debug' => env('FLAG_DEBUG', 'render'),
     'protocol' => env('PROTOCOL', 'https'),
     'rendering_url' => env('RENDERING_URL'),
-    'whitelist' => [],
-    'blacklist' => [
+    'whitelist' =>  !empty(env('WHITE_LIST')) ? explode(',',env('WHITE_LIST')) : [],
+    'blacklist' =>  !empty(env('BLACK_LIST')) ? explode(',',env('BLACK_LIST')) : [
         '*.js',
         '*.css',
         '*.xml',
@@ -45,14 +45,13 @@ return [
         '*.m4v',
         '*.torrent'
     ],
-    'crawler_user_agents' => [
+    'crawler_user_agents' => !empty(env('CRAWLER_AGENT')) ? explode(',',env('CRAWLER_AGENT')) : [
         'googlebot',
         'yahoo',
         'bingbot',
         'postman',
         'facebookexternalhit',
         'twitterbot',
-        'rogerbot',
         'linkedinbot',
         'embedly',
         'showyoubot',
