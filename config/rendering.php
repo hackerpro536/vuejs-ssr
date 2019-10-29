@@ -1,12 +1,12 @@
 <?php 
 return [
-    'enable' => env('RENDERING_ENABLE', true),
-    'flag_debug' => env('FLAG_DEBUG', 'render'),
-    'protocol' => env('PROTOCOL', 'https'),
+    'enable'        => env('RENDERING_ENABLE', true),
+    'flag_debug'    => env('FLAG_DEBUG', 'render'),
+    'protocol'      => env('PROTOCOL', 'https'),
     'rendering_url' => env('RENDERING_URL'),
-    'render_all' => => env('RENDER_ALL',0),
-    'whitelist' =>  !empty(env('WHITE_LIST')) ? explode(',',env('WHITE_LIST')) : [],
-    'blacklist' =>  !empty(env('BLACK_LIST')) ? explode(',',env('BLACK_LIST')) : [
+    'render_all'    => env('RENDER_ALL',0),
+    'whitelist'     =>  !empty(env('WHITE_LIST')) ? explode(',',env('WHITE_LIST')) : [],
+    'blacklist'     =>  !empty(env('BLACK_LIST')) ? explode(',',env('BLACK_LIST')) : [
         '*.js',
         '*.css',
         '*.xml',
