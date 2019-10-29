@@ -24,6 +24,8 @@ class VueSSRMiddleware
     private $returnSoftHttpCodes;
     private $flag;
     private $protocol;
+    private $render_all;
+
     public function __construct(Application $app, Guzzle $client)
     {
         $this->app = $app;
@@ -40,6 +42,7 @@ class VueSSRMiddleware
 
         $config = $app['config']->get('rendering');
         $this->flag = $config['flag_debug'];
+        $this->render_all = $config['render_all'];
         $this->protocol = $config['protocol'];
         $this->renderingUri = $config['rendering_url'];
         $this->crawlerUserAgents = $config['crawler_user_agents'];
@@ -101,7 +104,7 @@ class VueSSRMiddleware
         }
 
         if ($bufferAgent) $isRequestingPrerenderedPage = true;
-
+        if ($this->render_all) $isRequestingPrerenderedPage = true;
         if (!$isRequestingPrerenderedPage) return false;
 
         // only check whitelist if it is not empty
