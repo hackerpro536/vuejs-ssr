@@ -8,7 +8,7 @@ Our Service - Dịch vụ của chúng tôi
     <li><a href="https://lptech.asia/dich-vu/dich-vu-seo">Dịch vụ SEO</a></li>
     <li><a href="https://lptech.asia/dich-vu/dich-vu-booking-kol-influencer-uy-tin-tang-nhan-dien-thuong-hieu">Dịch vụ Kols</a></li>
     <li><a href="https://lptech.asia/dich-vu/dich-vu-booking-pr-bao-chi-uy-tin-cho-doanh-nghiep">Dịch vụ Pr Booking</a></li>
-    <li><a href="https://lptech.asia/dich-vu/dich-vu-content-website-viet-bai-chuyen-nghiep-chuan-seo">Dịch vụ Content</a></li>
+    <li><a href="https://lptech.asia/dich-vu/dich-vu-content">Dịch vụ Content</a></li>
     <li><a href="https://lptech.asia/dich-vu/giai-phap-marketing-tong-the-cho-doanh-nghiep-vua-va-nho">Dịch vụ Marketing tổng thể</a></li>
 </ul>
 
